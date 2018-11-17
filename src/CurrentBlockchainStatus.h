@@ -6,7 +6,7 @@
 #define LOKBLOCKS_CURRENTBLOCKCHAINSTATUS_H
 
 #include "mstch/mstch.hpp"
-#include "SevaBit_headers.h"
+#include "SevaBlock_headers.h"
 #include "MicroCore.h"
 
 #include <boost/algorithm/string.hpp>

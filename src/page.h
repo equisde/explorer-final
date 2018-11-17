@@ -9,7 +9,7 @@
 
 #include "mstch/mstch.hpp"
 
-#include "loki_headers.h"
+#include "SevaBlock_headers.h"
 
 #include "../gen/version.h"
 
@@ -5668,7 +5668,7 @@ public:
                 {"last_git_commit_hash", string {GIT_COMMIT_HASH}},
                 {"last_git_commit_date", string {GIT_COMMIT_DATETIME}},
                 {"git_branch_name"     , string {GIT_BRANCH_NAME}},
-                {"loki_version_full"   , string {LOKI_VERSION_FULL}},
+                {"sevabit_version_full"   , string {sevabit_VERSION_FULL}},
                 {"api"                 , ONIONEXPLORER_RPC_VERSION},
                 {"blockchain_height"   , core_storage->get_current_blockchain_height()}
         };
@@ -6816,7 +6816,7 @@ private:
                 {"last_git_commit_hash", string {GIT_COMMIT_HASH}},
                 {"last_git_commit_date", string {GIT_COMMIT_DATETIME}},
                 {"git_branch_name"     , string {GIT_BRANCH_NAME}},
-                {"loki_version_full"   , string {LOKI_VERSION_FULL}},
+                {"sevabit_version_full"   , string {sevabit_VERSION_FULL}},
                 {"api"                 , std::to_string(ONIONEXPLORER_RPC_VERSION_MAJOR)
                                          + "."
                                          + std::to_string(ONIONEXPLORER_RPC_VERSION_MINOR)},

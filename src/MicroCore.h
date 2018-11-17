@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-#include "loki_headers.h"
+#include "SevaBlock_headers.h"
 #include "tools.h"
 
 namespace lokeg
@@ -30,7 +30,7 @@ namespace lokeg
 
         Blockchain m_blockchain_storage;
         tx_memory_pool m_mempool;
-        SevaBit::deregister_vote_pool m_deregister_vote_pool;
+        sevabit::deregister_vote_pool m_deregister_vote_pool;
 
         hw::device* m_device;
 
