@@ -31,8 +31,8 @@
 set(LIBS common;blocks;cryptonote_basic;cryptonote_core;multisig;
 		cryptonote_protocol;daemonizer;mnemonics;epee;lmdb;device;
 		blockchain_db;ringct;wallet;cncrypto;easylogging;version;checkpoints)
-set(CPP_LOKI_DIR " /home/rcarrasco/seva2/")
-message(STATUS FindLokiaaaaaaaa " ${CPP_LOKI_DIR}")
+set(CPP_LOKI_DIR " /home/rcarrasco/SevaBit/src")
+message(STATUS FindLokiCPP " ${CPP_LOKI_DIR}")
     set(LOK_INCLUDE_DIRS "${CPP_LOKI_DIR}")
 
 # if the project is a subset of main cpp-ethereum project
@@ -51,7 +51,7 @@ foreach (l ${LIBS})
 
 	set(LOK_${L}_LIBRARIES ${LOK_${L}_LIBRARY})
 
-    message(STATUS FindLokiaaaaaaaa " LOK_${L}_LIBRARIES ${LOK_${L}_LIBRARY}")
+    message(STATUS FindLokiLibs " LOK_${L}_LIBRARIES ${LOK_${L}_LIBRARY}")
 
 	add_library(${l} STATIC IMPORTED)
 	set_property(TARGET ${l} PROPERTY IMPORTED_LOCATION ${LOK_${L}_LIBRARIES})
@@ -59,14 +59,14 @@ foreach (l ${LIBS})
 endforeach()
 
 if (EXISTS ${LOKI_BUILD_DIR}/src/ringct/libringct_basic.a)
-	message(STATUS FindLokiaaaaaaaaaaaaaaaaaaaa " found libringct_basic.a")
+	message(STATUS FindLokifounded " found libringct_basic.a")
 	add_library(ringct_basic STATIC IMPORTED)
 	set_property(TARGET ringct_basic
 		PROPERTY IMPORTED_LOCATION ${LOKI_BUILD_DIR}/src/ringct/libringct_basic.a)
 endif()
 
 
-message(STATUS ${LOKI_SOURCE_DIR}/build)
+message(STATUS SourceDIR  ${LOKI_SOURCE_DIR})
 
 # include SevaBit headers
 include_directories(
