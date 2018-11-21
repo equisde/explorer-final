@@ -81,7 +81,7 @@ class rpccalls
 
 public:
 
-    rpccalls(string _daemon_url = "http:://127.0.0.1:22023",
+    rpccalls(string _daemon_url = "http:://127.0.0.1:22049",
              uint64_t _timeout = 200000);
 
     bool
