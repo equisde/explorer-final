@@ -49,7 +49,7 @@ namespace lokeg
                  "enable users to have the index page on autorefresh")
                 ("enable-emission-monitor", value<bool>()->default_value(false)->implicit_value(true),
                  "enable SevaBit total emission monitoring thread")
-                ("port,p", value<string>()->default_value("8081"),
+                ("port,p", value<string>()->default_value("80"),
                  "default explorer port")
                 ("testnet-url", value<string>()->default_value(""),
                  "you can specify testnet url, if you run it on mainnet or stagenet. link will show on front page to testnet explorer")
@@ -69,7 +69,7 @@ namespace lokeg
                  "path to crt file for ssl (https) functionality")
                 ("ssl-key-file", value<string>(),
                  "path to key file for ssl (https) functionality")
-                ("daemon-url,d", value<string>()->default_value("http:://127.0.0.1:22023"),
+                ("daemon-url,d", value<string>()->default_value("http:://127.0.0.1:22049"),
                  "SevaBit daemon url");
 
 
